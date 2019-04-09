@@ -15,4 +15,4 @@ module Testing =
                 // assign it a new value
                 input.SentimentText <- text
             
-                predictor.Predict(input) |> displayTestResult)
+                (input, predictor.Predict(input)) |> displayTestResult)

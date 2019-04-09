@@ -29,8 +29,8 @@ module Display =
             printfn "")
         printfn ""
 
-    let displayTestResult (prediction : SentimentPrediction) =
+    let displayTestResult (input : SentimentData, prediction : SentimentPrediction) =
         printfn ""
-        printfn "Text       : %s" x
+        printfn "Text       : %s" input.SentimentText
         printfn "Prediction : %b" (prediction.PredictedLabel)
         printfn "Score      : %0.4f" (prediction.Score)
